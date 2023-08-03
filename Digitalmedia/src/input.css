@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.user-pic.active-pic {
+  border: 2px solid #ff7d3b;
+}
+
+.user-text {
+  display: none;
+}
+.user-text.active-text {
+  display: block;
+  animation: moveup 1s linear forwards;
+}
+.user-pic {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes moveup {
+  0% {
+    margin-top: 40px;
+    opacity: 0;
+  }
+  50% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.card {
+  perspective: 1000px;
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 0.4s;
+}
+.front {
+  overflow: hidden;
+}
